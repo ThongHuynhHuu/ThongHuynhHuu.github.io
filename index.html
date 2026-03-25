@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huỳnh Hữu Thông - Portfolio</title>
+    <style>
+        /* CSS Tông màu chủ đạo: Đen */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117; /* Màu đen giống GitHub Dark Mode */
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(180deg, #000000 0%, #0d1117 100%);
+        }
+
+        header h1 {
+            color: #58a6ff;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Hiệu ứng HOVER cho các dự án */
+        .project-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px); /* Nổi lên khi hover */
+            box-shadow: 0 8px 24px rgba(88, 166, 255, 0.2); /* Ánh sáng xanh */
+            border-color: #58a6ff;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: #58a6ff;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hiệu ứng LƯỚT LÊN/XUỐNG (Scroll Reveal) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Huỳnh Hữu Thông</h1>
+        <p>Sinh viên năm 3 Đại học Sài Gòn | Đam mê AI & Web Development</p>
+    </header>
+
+    <div class="container">
+        <section class="reveal">
+            <h2>Về bản thân</h2>
+            <p>Xin chào! Mình là Thông, hiện đang theo học tại Đại học Sài Gòn (SGU). Mình có niềm đam mê mãnh liệt với Trí tuệ nhân tạo (AI), thiết kế Web và các cuộc thi lập trình. Mình luôn thích tìm tòi và áp dụng các giải pháp công nghệ mới vào thực tế.</p>
+        </section>
+
+        <section class="reveal">
+            <h2>Dự án tiêu biểu</h2>
+            
+            <div class="project-card">
+                <h3>☕ CoffeeManagement (C#)</h3>
+                <p>Hệ thống phần mềm quản lý cửa hàng cà phê.</p>
+                <a href="https://github.com/toroi6789/CoffeeManagement" target="_blank">Xem source code &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <h3>📖 web2_truyen (PHP)</h3>
+                <p>Website nền tảng đọc truyện trực tuyến.</p>
+                <a href="https://github.com/phattin/web2_truyen" target="_blank">Xem source code &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <h3>🏢 Project_QL_KTS_java (Java)</h3>
+                <p>Ứng dụng quản lý ký túc xá xây dựng bằng Java.</p>
+                <a href="https://github.com/ThongHuynhHuu/Project_QL_KTS_java" target="_blank">Xem source code &rarr;</a>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <h2>Liên hệ</h2>
+            <div class="contact-links">
+                <a href="mailto:thonghuynhbihi@gmail.com">Email</a>
+                <a href="https://www.facebook.com/thong.huynhhuu.777/?locale=vi_VN" target="_blank">Facebook</a>
+                <a href="https://github.com/ThongHuynhHuu" target="_blank">GitHub</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Kích hoạt ngay khi load trang
+    </script>
+</body>
+</html>

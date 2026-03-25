@@ -29,7 +29,7 @@
 | :--- | :---: | :--- |
 | **[CoffeeManagement](https://github.com/toroi6789/CoffeeManagement)** | `C#` | Phần mềm quản lý quán cà phê. |
 | **[web2_truyen](https://github.com/phattin/web2_truyen)** | `PHP` | Website đọc truyện trực tuyến. |
-| **[Project_QL_KTS_java](https://github.com/ThongHuynhHuu/Project_QL_KTS_java)** | `Java` | Dự án quản lý KTX xây dựng bằng Java. |
+| **[Project_QL_TS_java](https://github.com/ThongHuynhHuu/Project_QL_TS_java)** | `Java` | Dự án quản lý tuyển sinh xây dựng bằng Java. |
 
 ## 📊 Thống kê GitHub
 

@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huỳnh Hữu Thông - Portfolio</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         /* CSS Tông màu chủ đạo: Đen */
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d1117; /* Màu đen giống GitHub Dark Mode */
+            background-color: #0d1117; /* Màu đen GitHub Dark Mode */
             color: #c9d1d9;
             line-height: 1.6;
         }
@@ -29,7 +32,7 @@
         .container {
             max-width: 900px;
             margin: auto;
-            padding: 20px;
+            padding: 20px 20px 80px 20px;
         }
 
         /* Hiệu ứng HOVER cho các dự án */
@@ -44,7 +47,7 @@
 
         .project-card:hover {
             transform: translateY(-5px); /* Nổi lên khi hover */
-            box-shadow: 0 8px 24px rgba(88, 166, 255, 0.2); /* Ánh sáng xanh */
+            box-shadow: 0 8px 24px rgba(88, 166, 255, 0.15); /* Ánh sáng xanh nhẹ */
             border-color: #58a6ff;
         }
 
@@ -56,29 +59,55 @@
         a {
             color: #58a6ff;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         a:hover {
+            color: #79c0ff;
             text-decoration: underline;
+        }
+
+        /* CSS MỚI CHO PHẦN THÔNG TIN LIÊN HỆ */
+        .contact-box {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 30px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Khoảng cách giữa các dòng */
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 1.1em;
+        }
+
+        .contact-item i {
+            color: #58a6ff;
+            font-size: 1.5em;
+            width: 40px; /* Cố định chiều rộng icon để chữ thẳng hàng */
+            text-align: center;
+            margin-right: 15px;
+        }
+
+        .contact-item span strong {
+            color: #ffffff;
+            margin-right: 5px;
         }
 
         /* Hiệu ứng LƯỚT LÊN/XUỐNG (Scroll Reveal) */
         .reveal {
             opacity: 0;
-            transform: translateY(50px);
+            transform: translateY(40px);
             transition: all 0.8s ease-out;
         }
 
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
         }
     </style>
 </head>
@@ -90,41 +119,66 @@
     </header>
 
     <div class="container">
+        
         <section class="reveal">
-            <h2>Về bản thân</h2>
-            <p>Xin chào! Mình là Thông, hiện đang theo học tại Đại học Sài Gòn (SGU). Mình có niềm đam mê mãnh liệt với Trí tuệ nhân tạo (AI), thiết kế Web và các cuộc thi lập trình. Mình luôn thích tìm tòi và áp dụng các giải pháp công nghệ mới vào thực tế.</p>
+            <h2>👨‍💻 Về bản thân</h2>
+            <p>Xin chào! Mình là Thông, hiện đang theo học tại <strong>Đại học Sài Gòn (SGU)</strong>. Mình có niềm đam mê mãnh liệt với Trí tuệ nhân tạo (AI), thiết kế Web và các cuộc thi lập trình. Mình luôn thích tìm tòi và áp dụng các giải pháp công nghệ mới vào thực tế để tạo ra những sản phẩm có giá trị.</p>
         </section>
 
         <section class="reveal">
-            <h2>Dự án tiêu biểu</h2>
+            <h2>🚀 Dự án tiêu biểu</h2>
             
             <div class="project-card">
                 <h3>☕ CoffeeManagement (C#)</h3>
-                <p>Hệ thống phần mềm quản lý cửa hàng cà phê.</p>
+                <p>Hệ thống phần mềm quản lý cửa hàng cà phê giúp tối ưu hóa việc bán hàng và quản lý doanh thu.</p>
                 <a href="https://github.com/toroi6789/CoffeeManagement" target="_blank">Xem source code &rarr;</a>
             </div>
 
             <div class="project-card">
                 <h3>📖 web2_truyen (PHP)</h3>
-                <p>Website nền tảng đọc truyện trực tuyến.</p>
+                <p>Website nền tảng đọc truyện trực tuyến với giao diện thân thiện cho người dùng.</p>
                 <a href="https://github.com/phattin/web2_truyen" target="_blank">Xem source code &rarr;</a>
             </div>
 
             <div class="project-card">
                 <h3>🏢 Project_QL_TS_java (Java)</h3>
-                <p>Ứng dụng quản lý tuyển sinh xây dựng bằng Java.</p>
+                <p>Ứng dụng quản lý ký tuyển sinh xây dựng bằng Java Swing và Database, giúp quản lý nguyện vọng của sinh viên hiệu quả.</p>
                 <a href="https://github.com/ThongHuynhHuu/Project_QL_TS_java" target="_blank">Xem source code &rarr;</a>
             </div>
         </section>
 
         <section class="reveal">
-            <h2>Liên hệ</h2>
-            <div class="contact-links">
-                <a href="mailto:thonghuynhbihi@gmail.com">Email</a>
-                <a href="https://www.facebook.com/thong.huynhhuu.777/?locale=vi_VN" target="_blank">Facebook</a>
-                <a href="https://github.com/ThongHuynhHuu" target="_blank">GitHub</a>
+            <h2>📫 Thông tin liên hệ</h2>
+            <p>Bạn có dự án thú vị hay chỉ đơn giản là muốn kết nối với mình? Hãy liên hệ qua các kênh dưới đây nhé:</p>
+            
+            <div class="contact-box">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span><strong>Email:</strong> <a href="mailto:thonghuynhbihi@gmail.com">thonghuynhbihi@gmail.com</a></span>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-facebook"></i>
+                    <span><strong>Facebook:</strong> <a href="https://www.facebook.com/thong.huynhhuu.777/?locale=vi_VN" target="_blank">Huỳnh Hữu Thông</a></span>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span><strong>GitHub:</strong> <a href="https://github.com/ThongHuynhHuu" target="_blank">github.com/ThongHuynhHuu</a></span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-orcid"></i>
+                    <span><strong>ORCID:</strong> <a href="https://orcid.org/0009-0007-3434-4417" target="_blank">0009-0007-3434-4417</a></span>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span><strong>Địa điểm:</strong> Đại học Sài Gòn, TP. Hồ Chí Minh, Việt Nam</span>
+                </div>
             </div>
         </section>
+        
     </div>
 
     <script>
@@ -133,7 +187,7 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
+                var elementVisible = 100; // Cách mép dưới 100px thì kích hoạt
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
                 }
